@@ -16,6 +16,7 @@ namespace Library
     {
         List<Admin> admins;
         List<Salesman> salesman;
+        List<Customer> customer;
         List<Book> books;
         List<Author> authors;
         List<Genre> genres;
@@ -29,6 +30,7 @@ namespace Library
             {
                 admins = library.Admins.ToList();
                 salesman = library.Salesmen.ToList();
+                customer = library.Customers.ToList();
                 books = library.Books.ToList();
                 booksales = library.Booksales.ToList();
                 authors = library.Authors.ToList();
@@ -41,7 +43,7 @@ namespace Library
         {
                           
            
-            SalerView salerView = new SalerView();
+            SalerView salerView = new SalerView(books,customer,salesman,booksales);
         
             foreach (var item in salesman)
             {

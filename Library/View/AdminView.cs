@@ -53,7 +53,6 @@ namespace Library.View
             book.CostPrice = Convert.ToInt32(textBox4.Text.ToString());
             book.SalesPrice = Convert.ToInt32(textBox5.Text.ToString());
             book.Quantity = Convert.ToInt32(textBox6.Text.ToString());
-            Books.Add(book);
             using (LibraryContext library=new LibraryContext())
             {
                 if (book.Id == 0)
@@ -109,7 +108,7 @@ namespace Library.View
                     textBox6.Text = book.Quantity.ToString();
 
                 }
-                button3.Enabled = true;
+                button3.Enabled = true; 
             }
         }
 
