@@ -43,7 +43,7 @@ namespace Library
         {
                           
            
-            SalerView salerView = new SalerView(books,customer,salesman,booksales);
+            SalerView salerView = new SalerView(books,customer,salesman,booksales,authors,genres);
         
             foreach (var item in salesman)
             {

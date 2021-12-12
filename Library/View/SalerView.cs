@@ -15,14 +15,18 @@ namespace Library.View
        public  List<Customer> Customers { get; set; }
         public List<Salesman> Salers { get; set; }
         public List<Booksale> Booksale { get; set; }
+        public List<Author> Authors { get; set; }
+        public List<Genre> Genres { get; set; }
         Booksale bkSale = new Booksale();
-        public SalerView(List<Book> book,List<Customer> customers,List<Salesman> salers,List<Booksale> booksale)
+        public SalerView(List<Book> book,List<Customer> customers,List<Salesman> salers,List<Booksale> booksale, List<Author> authors,List<Genre> genres)
         {
             InitializeComponent();
             Book = book;
             Customers = customers;
             Salers = salers;
             Booksale = booksale;
+            Authors = authors;
+            Genres = genres;
             for (int i = 0; i < Book.Count; i++)
             {
                 comboBox1.Items.Add(Book[i].Name);
@@ -63,6 +67,19 @@ namespace Library.View
                 library.SaveChanges();
             }
             comboBox2.Items.Add(customer.Name);
+            MessageBox.Show("Succesful Opertion");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Reports reports = new Reports();
+            reports.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Search search = new Search(Book,Authors,Genres);
+            search.ShowDialog();
         }
     }
 }
