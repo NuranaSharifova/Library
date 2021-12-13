@@ -41,8 +41,13 @@ namespace Library
 
         private void button1_Click(object sender, EventArgs e)
         {
-                          
-           
+            salesman = null;
+            using (LibraryContext library = new LibraryContext())
+            {
+               
+                salesman = library.Salesmen.ToList();
+    
+            }
             SalerView salerView = new SalerView(books,customer,salesman,booksales,authors,genres);
         
             foreach (var item in salesman)
@@ -52,12 +57,9 @@ namespace Library
 
                     salerView.ShowDialog();
 
-                }
-                else
-                {
-                    MessageBox.Show("Incorrect credentials");
-                }
+                }  
             }
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -79,6 +81,10 @@ namespace Library
             }
         }
 
-     
+        private void label3_Click(object sender, EventArgs e)
+        {
+            Registration register = new Registration(salesman);
+            register.ShowDialog();
+        }
     }
 }

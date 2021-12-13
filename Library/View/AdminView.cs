@@ -25,7 +25,7 @@ namespace Library.View
             Authors = authors;
             Genres = genres;
             Publishers = publishers;
-            dataGridView1.DataSource = Books;
+            dataGridView1.DataSource = Books.Select(x=>new {x.Id,x.Name,x.Authorid,x.Genreid,x.Publisherid,x.Pages,x.PublishingDate,x.CostPrice,x.SalesPrice,x.Continued,x.Quantity}).ToList();
             for (int i = 0; i < Authors.Count; i++)
             {
                 comboBox1.Items.Add(Authors[i].Firstname+" "+Authors[i].Lastname);              
