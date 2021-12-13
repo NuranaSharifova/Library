@@ -27,7 +27,7 @@ namespace Library
             InitializeComponent();
 
             using (LibraryContext library = new LibraryContext())
-            {
+            {           
                 admins = library.Admins.ToList();
                 salesman = library.Salesmen.ToList();
                 customer = library.Customers.ToList();
@@ -36,7 +36,11 @@ namespace Library
                 authors = library.Authors.ToList();
                 genres = library.Genres.ToList();
                 publishers = library.Publishers.ToList();
+           
+            
             }
+          
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -64,6 +68,22 @@ namespace Library
 
         private void button2_Click(object sender, EventArgs e)
         {
+
+            if (admins.Count()==0)
+            {
+
+                Admin admin = new Admin();
+                admin.Login = "Nurana";
+                admin.Password = "12345";
+                using (LibraryContext library = new LibraryContext())
+                {
+                    library.Admins.Add(admin);
+                    library.SaveChanges();
+                    
+                    admins = library.Admins.ToList();
+                }
+               
+            }
             AdminView adminform = new AdminView(books,authors,genres,publishers);
             foreach (var item in admins)
             {

@@ -37,7 +37,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(23, 101);
+            this.dataGridView1.Location = new System.Drawing.Point(23, 71);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(738, 250);
@@ -47,7 +47,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(23, 38);
+            this.comboBox1.Location = new System.Drawing.Point(23, 24);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(565, 28);
             this.comboBox1.TabIndex = 1;
@@ -56,7 +56,7 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Highlight;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(626, 38);
+            this.button1.Location = new System.Drawing.Point(626, 24);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(135, 29);
             this.button1.TabIndex = 2;
@@ -68,7 +68,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 371);
+            this.ClientSize = new System.Drawing.Size(783, 336);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dataGridView1);

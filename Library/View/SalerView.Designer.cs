@@ -167,9 +167,9 @@
             // 
             this.button2.BackColor = System.Drawing.SystemColors.Highlight;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(452, 82);
+            this.button2.Location = new System.Drawing.Point(466, 82);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(227, 29);
+            this.button2.Size = new System.Drawing.Size(213, 29);
             this.button2.TabIndex = 13;
             this.button2.Text = "Add New Customer";
             this.button2.UseVisualStyleBackColor = false;
@@ -179,9 +179,9 @@
             // 
             this.button3.BackColor = System.Drawing.SystemColors.Highlight;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(452, 293);
+            this.button3.Location = new System.Drawing.Point(462, 209);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(227, 29);
+            this.button3.Size = new System.Drawing.Size(217, 29);
             this.button3.TabIndex = 14;
             this.button3.Text = "Get Reports";
             this.button3.UseVisualStyleBackColor = false;
@@ -191,9 +191,9 @@
             // 
             this.button4.BackColor = System.Drawing.SystemColors.Highlight;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button4.Location = new System.Drawing.Point(452, 332);
+            this.button4.Location = new System.Drawing.Point(462, 259);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(227, 29);
+            this.button4.Size = new System.Drawing.Size(217, 29);
             this.button4.TabIndex = 15;
             this.button4.Text = "Search";
             this.button4.UseVisualStyleBackColor = false;
@@ -203,7 +203,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(705, 373);
+            this.ClientSize = new System.Drawing.Size(705, 309);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
