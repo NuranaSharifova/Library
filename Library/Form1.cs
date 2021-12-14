@@ -36,8 +36,7 @@ namespace Library
                 authors = library.Authors.ToList();
                 genres = library.Genres.ToList();
                 publishers = library.Publishers.ToList();
-           
-            
+                      
             }
           
 

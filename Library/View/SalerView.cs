@@ -6,7 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-
+using System.Linq;
 namespace Library.View
 {
     public partial class SalerView : Form
@@ -43,9 +43,9 @@ namespace Library.View
 
         private void button1_Click(object sender, EventArgs e)
         {
-            bkSale.Bookid = Book[comboBox1.SelectedIndex].Id;
-            bkSale.Customerid = Customers[comboBox2.SelectedIndex].Id;
-            bkSale.Salesmanid = Salers[comboBox3.SelectedIndex].Id;
+            bkSale.Bookid = Book.Where(x => x.Name == comboBox1.SelectedItem.ToString()).Select(x => x.Id).First();
+            bkSale.Customerid = Customers.Where(x => x.Name == comboBox2.SelectedItem.ToString()).Select(x => x.Id).First();
+            bkSale.Salesmanid = Salers.Where(x => x.Login == comboBox3.SelectedItem.ToString()).Select(x => x.Id).First();
             bkSale.SalesDate =Convert.ToDateTime(textBox1.Text.ToString());
             bkSale.SalesPrice = Convert.ToInt32(textBox2.Text.ToString());
             using (LibraryContext library=new LibraryContext())
