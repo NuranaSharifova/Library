@@ -37,9 +37,28 @@ namespace Library.View
                 case "Best Seller Books":
                     using (LibraryContext library = new LibraryContext())
                     {
+                     
+                        var result2 = library.Books.Include(z=>z.Booksales)
+                            .Select(x=>new { Name=x.Name,Count=x.Booksales.Count()}).OrderByDescending(x=>x.Count).Where(x=>x.Count!=0).Take(3).ToList();
+                        dataGridView1.DataSource = result2;
+                    }
+                    break;
+                case "Most Popular Authors":
+                    using (LibraryContext library = new LibraryContext())
+                    {
 
-                        //var result = library.Booksales.GroupBy<>
-                        //dataGridView1.DataSource = result;
+                        var result2 = library.Booksales.Include(x=>x.Book).ThenInclude(z=>z.Author)
+                            .Select(x => new { Author=x.Book.Author.Firstname,Count = x.Book.Booksales.Count() }).Distinct().OrderByDescending(x => x.Count).Where(x => x.Count != 0).Take(3).ToList();
+                        dataGridView1.DataSource = result2;
+                    }
+                    break;
+                case "Most Popular Genres":
+                    using (LibraryContext library = new LibraryContext())
+                    {
+
+                        var result2 = library.Booksales.Include(x => x.Book).ThenInclude(z => z.Genre)
+                            .Select(x => new { Genre = x.Book.Genre.Name, Count = x.Book.Booksales.Count() }).Distinct().OrderByDescending(x => x.Count).Where(x => x.Count != 0).Take(3).ToList();
+                        dataGridView1.DataSource = result2;
                     }
                     break;
                 default:

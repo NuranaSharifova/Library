@@ -91,8 +91,8 @@ namespace Library.View
             }
             book.Pages = Convert.ToInt32(textBox3.Text.ToString());
             book.PublishingDate = Convert.ToInt32(textBox2.Text.ToString());
-            book.CostPrice = Convert.ToInt32(textBox4.Text.ToString());
-            book.SalesPrice = Convert.ToInt32(textBox5.Text.ToString());
+            book.CostPrice = Convert.ToInt32(textBox4.Text.ToString().Split(".")[0]);
+            book.SalesPrice = Convert.ToInt32(textBox5.Text.ToString().Split(".")[0]);
             book.Quantity = Convert.ToInt32(textBox6.Text.ToString());
             using (LibraryContext library=new LibraryContext())
             {
