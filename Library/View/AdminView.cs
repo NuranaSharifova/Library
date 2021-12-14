@@ -93,6 +93,8 @@ namespace Library.View
             book.PublishingDate = Convert.ToInt32(textBox2.Text.ToString());
             book.CostPrice = Convert.ToInt32(textBox4.Text.ToString().Split(".")[0]);
             book.SalesPrice = Convert.ToInt32(textBox5.Text.ToString().Split(".")[0]);
+            if (comboBox4.Text.ToString() == "Yes") book.Continued = true;
+            else book.Continued = false;
             book.Quantity = Convert.ToInt32(textBox6.Text.ToString());
             using (LibraryContext library=new LibraryContext())
             {
